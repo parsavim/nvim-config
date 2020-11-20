@@ -11,7 +11,7 @@ set nowrap
 set smartcase
 set noswapfile
 set nobackup
-set undodir=$HOME\AppData\Local\nvim\undodir
+set undodir=../undodir
 set undofile
 set incsearch
 
