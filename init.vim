@@ -1,15 +1,15 @@
 " general 
-source ./general/plugins.vim
-source ./general/settings.vim
+source ~/.config/nvim/general/plugins.vim
+source ~/.config/nvim/general/settings.vim
 
 " scripts
-source ./scripts/mappings.vim
-source ./scripts/commands.vim 
+source ~/.config/nvim/scripts/mappings.vim
+source ~/.config/nvim/scripts/commands.vim 
 
 " plug config 
-source ./plug-config/coc.vim
-source ./plug-config/airline.vim
-source ./plug-config/nerdtree.vim
+source ~/.config/nvim/plug-config/coc.vim
+source ~/.config/nvim/plug-config/airline.vim
+source ~/.config/nvim/plug-config/nerdtree.vim
 
 
 

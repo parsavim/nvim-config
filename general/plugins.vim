@@ -1,4 +1,4 @@
-call plug#begin('../plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " themes
 Plug 'tomasiser/vim-code-dark'
