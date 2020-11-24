@@ -1,5 +1,5 @@
-set nolangremap
-set langmap=njekknje
+" set nolangremap
+" set langmap=njekknje
 
 let mapleader=" "
 
