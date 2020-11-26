@@ -1,4 +1,4 @@
-call plug#begin('$HOME\AppData\Local\nvim\plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " themes
 Plug 'tomasiser/vim-code-dark'
