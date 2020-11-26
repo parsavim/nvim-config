@@ -1,6 +1,3 @@
-set nolangremap
-set langmap=njekknje
-
 let mapleader=" "
 
 nnoremap <C-p> :FZF<Cr>
