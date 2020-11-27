@@ -1,16 +1,29 @@
-" general 
-source ~/.config/nvim/general/plugins.vim
-source ~/.config/nvim/general/settings.vim
+" Recursively read a directory, returning a relative path
+" to all non-directory files starting at `rootdir`
+function Rereaddir(rootdir)
+	let file_paths = []
 
-" scripts
-source ~/.config/nvim/scripts/mappings.vim
-source ~/.config/nvim/scripts/commands.vim 
+	for ent in readdir(a:rootdir)
+		" Concatenate directory path to entry
+		let ent = printf('%s/%s', a:rootdir, ent)
 
-" plug config 
-source ~/.config/nvim/plug-config/coc.vim
-source ~/.config/nvim/plug-config/airline.vim
-source ~/.config/nvim/plug-config/nerdtree.vim
+		let file_paths += isdirectory(ent) ? Rereaddir(ent) : [ent]
+	endfor
 
+	return file_paths
+endfunction
+		
+
+let g:nvim_config_root = getcwd()
+
+let s:scripts_dir = printf("%s/%s", g:nvim_config_root, "scripts")
+
+let s:source_files = Rereaddir(s:scripts_dir)
+call filter(s:source_files, 'v:val[-4:] ==# ".vim"')
+
+for s:source_file in s:source_files
+	execute 'source ' . s:source_file
+endfor
 
 
 
