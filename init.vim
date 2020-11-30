@@ -14,7 +14,7 @@ function Rereaddir(rootdir)
 endfunction
 		
 
-let g:nvim_config_root = getcwd()
+let g:nvim_config_root = expand('<sfile>:p:h')
 
 let s:scripts_dir = printf("%s/%s", g:nvim_config_root, "scripts")
 
