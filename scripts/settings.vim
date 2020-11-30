@@ -11,7 +11,6 @@ set nowrap
 set smartcase
 set noswapfile
 set nobackup
-set undodir=printf('%s/%s',stdpath('data'),'undodir')
 set undofile
 set incsearch
 
